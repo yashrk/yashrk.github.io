@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html><head><meta charset="UTF-8"><title>Main</title><style>html,head,body { padding:0; margin:0; }
+<html><head><meta charset="UTF-8"><title>App</title><style>html,head,body { padding:0; margin:0; }
 body { font-family: calibri, helvetica, arial, sans-serif; }</style><script type="text/javascript">
 (function() {
 'use strict';
@@ -10136,10 +10136,10 @@ var _elm_lang$svg$Svg_Attributes$additive = _elm_lang$virtual_dom$VirtualDom$att
 var _elm_lang$svg$Svg_Attributes$accumulate = _elm_lang$virtual_dom$VirtualDom$attribute('accumulate');
 var _elm_lang$svg$Svg_Attributes$accelerate = _elm_lang$virtual_dom$VirtualDom$attribute('accelerate');
 var _elm_lang$svg$Svg_Attributes$accentHeight = _elm_lang$virtual_dom$VirtualDom$attribute('accent-height');
-var _user$project$Main$subscriptions = function (model) {
+var _user$project$App$subscriptions = function (model) {
 	return _elm_lang$core$Platform_Sub$none;
 };
-var _user$project$Main$drawHole = F4(
+var _user$project$App$drawHole = F4(
 	function (note, hx, hy, scale) {
 		return A2(
 			_elm_lang$svg$Svg$g,
@@ -10217,7 +10217,7 @@ var _user$project$Main$drawHole = F4(
 				}
 			});
 	});
-var _user$project$Main$layout = {
+var _user$project$App$layout = {
 	ctor: '::',
 	_0: {
 		ctor: '::',
@@ -10526,7 +10526,7 @@ var _user$project$Main$layout = {
 		}
 	}
 };
-var _user$project$Main$majorBluesMode = {
+var _user$project$App$majorBluesMode = {
 	ctor: '::',
 	_0: 1,
 	_1: {
@@ -10551,7 +10551,32 @@ var _user$project$Main$majorBluesMode = {
 		}
 	}
 };
-var _user$project$Main$pentatonicMode = {
+var _user$project$App$bluesMode = {
+	ctor: '::',
+	_0: 1,
+	_1: {
+		ctor: '::',
+		_0: 4,
+		_1: {
+			ctor: '::',
+			_0: 6,
+			_1: {
+				ctor: '::',
+				_0: 7,
+				_1: {
+					ctor: '::',
+					_0: 8,
+					_1: {
+						ctor: '::',
+						_0: 11,
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$App$pentatonicMode = {
 	ctor: '::',
 	_0: 1,
 	_1: {
@@ -10572,7 +10597,7 @@ var _user$project$Main$pentatonicMode = {
 		}
 	}
 };
-var _user$project$Main$naturalMajorMode = {
+var _user$project$App$naturalMajorMode = {
 	ctor: '::',
 	_0: 1,
 	_1: {
@@ -10601,14 +10626,14 @@ var _user$project$Main$naturalMajorMode = {
 		}
 	}
 };
-var _user$project$Main$degreeToNote = F2(
+var _user$project$App$degreeToNote = F2(
 	function (degree, curTonality) {
 		return A2(
 			_elm_lang$core$Maybe$withDefault,
 			'',
 			A2(_elm_lang$core$Dict$get, degree, curTonality));
 	});
-var _user$project$Main$drawRow = F4(
+var _user$project$App$drawRow = F4(
 	function (row, rowNumber, curHarpTonality, curScale) {
 		return A2(
 			_elm_lang$svg$Svg$g,
@@ -10618,8 +10643,8 @@ var _user$project$Main$drawRow = F4(
 				function (_p0) {
 					var _p1 = _p0;
 					return A4(
-						_user$project$Main$drawHole,
-						A2(_user$project$Main$degreeToNote, _p1._0, curHarpTonality),
+						_user$project$App$drawHole,
+						A2(_user$project$App$degreeToNote, _p1._0, curHarpTonality),
 						_p1._1,
 						rowNumber,
 						curScale);
@@ -10635,7 +10660,7 @@ var _user$project$Main$drawRow = F4(
 						row,
 						A2(_elm_lang$core$List$range, 0, 10)))));
 	});
-var _user$project$Main$drawLayout = F3(
+var _user$project$App$drawLayout = F3(
 	function (layout, curHarpTonality, curScale) {
 		return A2(
 			_elm_lang$svg$Svg$g,
@@ -10644,14 +10669,14 @@ var _user$project$Main$drawLayout = F3(
 				_elm_lang$core$List$map,
 				function (_p4) {
 					var _p5 = _p4;
-					return A4(_user$project$Main$drawRow, _p5._0, _p5._1, curHarpTonality, curScale);
+					return A4(_user$project$App$drawRow, _p5._0, _p5._1, curHarpTonality, curScale);
 				},
 				A2(
 					_elm_community$list_extra$List_Extra$zip,
 					layout,
 					A2(_elm_lang$core$List$range, 0, 7))));
 	});
-var _user$project$Main$flatTonalities = {
+var _user$project$App$flatTonalities = {
 	ctor: '::',
 	_0: 0,
 	_1: {
@@ -10680,7 +10705,7 @@ var _user$project$Main$flatTonalities = {
 		}
 	}
 };
-var _user$project$Main$sharpTonalities = {
+var _user$project$App$sharpTonalities = {
 	ctor: '::',
 	_0: 2,
 	_1: {
@@ -10701,7 +10726,7 @@ var _user$project$Main$sharpTonalities = {
 		}
 	}
 };
-var _user$project$Main$chromaticFlat = {
+var _user$project$App$chromaticFlat = {
 	ctor: '::',
 	_0: 'c',
 	_1: {
@@ -10750,7 +10775,7 @@ var _user$project$Main$chromaticFlat = {
 		}
 	}
 };
-var _user$project$Main$tonalityFlat = function (shiftValue) {
+var _user$project$App$tonalityFlat = function (shiftValue) {
 	return _elm_lang$core$Dict$fromList(
 		A2(
 			_elm_community$list_extra$List_Extra$zip,
@@ -10761,9 +10786,9 @@ var _user$project$Main$tonalityFlat = function (shiftValue) {
 				A2(
 					_elm_lang$core$List$drop,
 					shiftValue,
-					A2(_elm_community$list_extra$List_Extra$cycle, 24, _user$project$Main$chromaticFlat)))));
+					A2(_elm_community$list_extra$List_Extra$cycle, 24, _user$project$App$chromaticFlat)))));
 };
-var _user$project$Main$chromaticSharp = {
+var _user$project$App$chromaticSharp = {
 	ctor: '::',
 	_0: 'c',
 	_1: {
@@ -10812,7 +10837,7 @@ var _user$project$Main$chromaticSharp = {
 		}
 	}
 };
-var _user$project$Main$tonalitySharp = function (shiftValue) {
+var _user$project$App$tonalitySharp = function (shiftValue) {
 	return _elm_lang$core$Dict$fromList(
 		A2(
 			_elm_community$list_extra$List_Extra$zip,
@@ -10823,66 +10848,93 @@ var _user$project$Main$tonalitySharp = function (shiftValue) {
 				A2(
 					_elm_lang$core$List$drop,
 					shiftValue,
-					A2(_elm_community$list_extra$List_Extra$cycle, 24, _user$project$Main$chromaticSharp)))));
+					A2(_elm_community$list_extra$List_Extra$cycle, 24, _user$project$App$chromaticSharp)))));
 };
-var _user$project$Main$Shift = F2(
+var _user$project$App$enharmonicEquivalents = _elm_lang$core$Dict$fromList(
+	A2(
+		_elm_lang$core$List$filter,
+		function (_p6) {
+			var _p7 = _p6;
+			return !_elm_lang$core$Native_Utils.eq(_p7._0, _p7._1);
+		},
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			A2(_elm_community$list_extra$List_Extra$zip, _user$project$App$chromaticFlat, _user$project$App$chromaticSharp),
+			A2(_elm_community$list_extra$List_Extra$zip, _user$project$App$chromaticSharp, _user$project$App$chromaticFlat))));
+var _user$project$App$addEquivalents = function (notes) {
+	var eqv = A3(
+		_elm_lang$core$List$foldl,
+		F2(
+			function (note, acc) {
+				var _p8 = A2(_elm_lang$core$Dict$get, note, _user$project$App$enharmonicEquivalents);
+				if (_p8.ctor === 'Just') {
+					return {ctor: '::', _0: _p8._0, _1: acc};
+				} else {
+					return acc;
+				}
+			}),
+		{ctor: '[]'},
+		notes);
+	return A2(_elm_lang$core$Basics_ops['++'], notes, eqv);
+};
+var _user$project$App$Shift = F2(
 	function (a, b) {
 		return {value: a, accidental: b};
 	});
-var _user$project$Main$Model = F3(
+var _user$project$App$Model = F3(
 	function (a, b, c) {
 		return {tonality: a, harp: b, mode: c};
 	});
-var _user$project$Main$Flat = {ctor: 'Flat'};
-var _user$project$Main$Natural = {ctor: 'Natural'};
-var _user$project$Main$init = {
+var _user$project$App$Flat = {ctor: 'Flat'};
+var _user$project$App$Natural = {ctor: 'Natural'};
+var _user$project$App$init = {
 	ctor: '_Tuple2',
 	_0: A3(
-		_user$project$Main$Model,
-		A2(_user$project$Main$Shift, 0, _user$project$Main$Natural),
-		A2(_user$project$Main$Shift, 0, _user$project$Main$Natural),
-		_user$project$Main$naturalMajorMode),
+		_user$project$App$Model,
+		A2(_user$project$App$Shift, 0, _user$project$App$Natural),
+		A2(_user$project$App$Shift, 0, _user$project$App$Natural),
+		_user$project$App$naturalMajorMode),
 	_1: _elm_lang$core$Platform_Cmd$none
 };
-var _user$project$Main$Sharp = {ctor: 'Sharp'};
-var _user$project$Main$tonalityType = function (shift) {
-	return A2(_elm_lang$core$List$member, shift, _user$project$Main$sharpTonalities) ? _user$project$Main$Sharp : _user$project$Main$Flat;
+var _user$project$App$Sharp = {ctor: 'Sharp'};
+var _user$project$App$tonalityType = function (shift) {
+	return A2(_elm_lang$core$List$member, shift, _user$project$App$sharpTonalities) ? _user$project$App$Sharp : _user$project$App$Flat;
 };
-var _user$project$Main$accidentalType = function (shift) {
-	return (!_elm_lang$core$Native_Utils.eq(shift.accidental, _user$project$Main$Natural)) ? shift.accidental : _user$project$Main$tonalityType(shift.value);
+var _user$project$App$accidentalType = function (shift) {
+	return (!_elm_lang$core$Native_Utils.eq(shift.accidental, _user$project$App$Natural)) ? shift.accidental : _user$project$App$tonalityType(shift.value);
 };
-var _user$project$Main$tonality = function (shift) {
-	var accidental = _user$project$Main$accidentalType(shift);
-	var _p6 = accidental;
-	if (_p6.ctor === 'Sharp') {
-		return _user$project$Main$tonalitySharp(shift.value);
+var _user$project$App$tonality = function (shift) {
+	var accidental = _user$project$App$accidentalType(shift);
+	var _p9 = accidental;
+	if (_p9.ctor === 'Sharp') {
+		return _user$project$App$tonalitySharp(shift.value);
 	} else {
-		return _user$project$Main$tonalityFlat(shift.value);
+		return _user$project$App$tonalityFlat(shift.value);
 	}
 };
-var _user$project$Main$scale = F3(
-	function (shift, mode, curHarp) {
+var _user$project$App$scale = F2(
+	function (shift, mode) {
 		return _elm_lang$core$Set$fromList(
-			A2(
-				_elm_lang$core$List$map,
-				function (_p7) {
-					var _p8 = _p7;
-					return _p8._1;
-				},
+			_user$project$App$addEquivalents(
 				A2(
-					_elm_lang$core$List$filter,
-					function (_p9) {
-						var _p10 = _p9;
-						return A2(_elm_lang$core$List$member, _p10._0, mode);
+					_elm_lang$core$List$map,
+					function (_p10) {
+						var _p11 = _p10;
+						return _p11._1;
 					},
-					_elm_lang$core$Dict$toList(
-						_user$project$Main$tonality(
-							A2(_user$project$Main$Shift, shift.value, curHarp.accidental))))));
+					A2(
+						_elm_lang$core$List$filter,
+						function (_p12) {
+							var _p13 = _p12;
+							return A2(_elm_lang$core$List$member, _p13._0, mode);
+						},
+						_elm_lang$core$Dict$toList(
+							_user$project$App$tonality(shift))))));
 	});
-var _user$project$Main$update = F2(
+var _user$project$App$update = F2(
 	function (msg, model) {
-		var _p11 = msg;
-		switch (_p11.ctor) {
+		var _p14 = msg;
+		switch (_p14.ctor) {
 			case 'HarpUpdate':
 				return function (t) {
 					return {
@@ -10890,7 +10942,7 @@ var _user$project$Main$update = F2(
 						_0: _elm_lang$core$Native_Utils.update(
 							model,
 							{
-								harp: A2(_user$project$Main$Shift, t, model.harp.accidental)
+								harp: A2(_user$project$App$Shift, t, model.harp.accidental)
 							}),
 						_1: _elm_lang$core$Platform_Cmd$none
 					};
@@ -10898,17 +10950,17 @@ var _user$project$Main$update = F2(
 					A2(
 						_elm_lang$core$Result$withDefault,
 						0,
-						_elm_lang$core$String$toInt(_p11._0)));
+						_elm_lang$core$String$toInt(_p14._0)));
 			case 'HarpAccUpdate':
 				var newAcc = function () {
-					var _p12 = _p11._0;
-					switch (_p12) {
+					var _p15 = _p14._0;
+					switch (_p15) {
 						case 'Flat':
-							return _user$project$Main$Flat;
+							return _user$project$App$Flat;
 						case 'Sharp':
-							return _user$project$Main$Sharp;
+							return _user$project$App$Sharp;
 						default:
-							return _user$project$Main$Natural;
+							return _user$project$App$Natural;
 					}
 				}();
 				return {
@@ -10916,20 +10968,22 @@ var _user$project$Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							harp: A2(_user$project$Main$Shift, model.harp.value, newAcc)
+							harp: A2(_user$project$App$Shift, model.harp.value, newAcc)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			case 'ModeUpdate':
 				var newMode = function () {
-					var _p13 = _p11._0;
-					switch (_p13) {
+					var _p16 = _p14._0;
+					switch (_p16) {
 						case 'Pentatonic':
-							return _user$project$Main$pentatonicMode;
+							return _user$project$App$pentatonicMode;
+						case 'Blues':
+							return _user$project$App$bluesMode;
 						case 'Major blues':
-							return _user$project$Main$majorBluesMode;
+							return _user$project$App$majorBluesMode;
 						default:
-							return _user$project$Main$naturalMajorMode;
+							return _user$project$App$naturalMajorMode;
 					}
 				}();
 				return {
@@ -10946,7 +11000,7 @@ var _user$project$Main$update = F2(
 						_0: _elm_lang$core$Native_Utils.update(
 							model,
 							{
-								tonality: A2(_user$project$Main$Shift, t, model.tonality.accidental)
+								tonality: A2(_user$project$App$Shift, t, model.tonality.accidental)
 							}),
 						_1: _elm_lang$core$Platform_Cmd$none
 					};
@@ -10954,17 +11008,17 @@ var _user$project$Main$update = F2(
 					A2(
 						_elm_lang$core$Result$withDefault,
 						0,
-						_elm_lang$core$String$toInt(_p11._0)));
+						_elm_lang$core$String$toInt(_p14._0)));
 			default:
 				var newAcc = function () {
-					var _p14 = _p11._0;
-					switch (_p14) {
+					var _p17 = _p14._0;
+					switch (_p17) {
 						case 'Flat':
-							return _user$project$Main$Flat;
+							return _user$project$App$Flat;
 						case 'Sharp':
-							return _user$project$Main$Sharp;
+							return _user$project$App$Sharp;
 						default:
-							return _user$project$Main$Natural;
+							return _user$project$App$Natural;
 					}
 				}();
 				return {
@@ -10972,28 +11026,28 @@ var _user$project$Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							tonality: A2(_user$project$Main$Shift, model.tonality.value, newAcc)
+							tonality: A2(_user$project$App$Shift, model.tonality.value, newAcc)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 		}
 	});
-var _user$project$Main$TonicAccUpdate = function (a) {
+var _user$project$App$TonicAccUpdate = function (a) {
 	return {ctor: 'TonicAccUpdate', _0: a};
 };
-var _user$project$Main$TonicUpdate = function (a) {
+var _user$project$App$TonicUpdate = function (a) {
 	return {ctor: 'TonicUpdate', _0: a};
 };
-var _user$project$Main$ModeUpdate = function (a) {
+var _user$project$App$ModeUpdate = function (a) {
 	return {ctor: 'ModeUpdate', _0: a};
 };
-var _user$project$Main$HarpAccUpdate = function (a) {
+var _user$project$App$HarpAccUpdate = function (a) {
 	return {ctor: 'HarpAccUpdate', _0: a};
 };
-var _user$project$Main$HarpUpdate = function (a) {
+var _user$project$App$HarpUpdate = function (a) {
 	return {ctor: 'HarpUpdate', _0: a};
 };
-var _user$project$Main$view = function (model) {
+var _user$project$App$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{ctor: '[]'},
@@ -11018,10 +11072,10 @@ var _user$project$Main$view = function (model) {
 						{
 							ctor: '::',
 							_0: A3(
-								_user$project$Main$drawLayout,
-								_user$project$Main$layout,
-								_user$project$Main$tonality(model.harp),
-								A3(_user$project$Main$scale, model.tonality, model.mode, model.harp)),
+								_user$project$App$drawLayout,
+								_user$project$App$layout,
+								_user$project$App$tonality(model.harp),
+								A2(_user$project$App$scale, model.tonality, model.mode)),
 							_1: {ctor: '[]'}
 						}),
 					_1: {ctor: '[]'}
@@ -11047,7 +11101,7 @@ var _user$project$Main$view = function (model) {
 								_elm_lang$html$Html$select,
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$TonicUpdate),
+									_0: _elm_lang$html$Html_Events$onInput(_user$project$App$TonicUpdate),
 									_1: {ctor: '[]'}
 								},
 								{
@@ -11177,7 +11231,7 @@ var _user$project$Main$view = function (model) {
 									_elm_lang$html$Html$select,
 									{
 										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$TonicAccUpdate),
+										_0: _elm_lang$html$Html_Events$onInput(_user$project$App$TonicAccUpdate),
 										_1: {ctor: '[]'}
 									},
 									{
@@ -11190,7 +11244,7 @@ var _user$project$Main$view = function (model) {
 												_1: {
 													ctor: '::',
 													_0: _elm_lang$html$Html_Attributes$selected(
-														_elm_lang$core$Native_Utils.eq(model.tonality.accidental, _user$project$Main$Flat)),
+														_elm_lang$core$Native_Utils.eq(model.tonality.accidental, _user$project$App$Flat)),
 													_1: {ctor: '[]'}
 												}
 											},
@@ -11209,7 +11263,7 @@ var _user$project$Main$view = function (model) {
 													_1: {
 														ctor: '::',
 														_0: _elm_lang$html$Html_Attributes$selected(
-															_elm_lang$core$Native_Utils.eq(model.tonality.accidental, _user$project$Main$Natural)),
+															_elm_lang$core$Native_Utils.eq(model.tonality.accidental, _user$project$App$Natural)),
 														_1: {ctor: '[]'}
 													}
 												},
@@ -11228,7 +11282,7 @@ var _user$project$Main$view = function (model) {
 														_1: {
 															ctor: '::',
 															_0: _elm_lang$html$Html_Attributes$selected(
-																_elm_lang$core$Native_Utils.eq(model.tonality.accidental, _user$project$Main$Sharp)),
+																_elm_lang$core$Native_Utils.eq(model.tonality.accidental, _user$project$App$Sharp)),
 															_1: {ctor: '[]'}
 														}
 													},
@@ -11247,7 +11301,7 @@ var _user$project$Main$view = function (model) {
 										_elm_lang$html$Html$select,
 										{
 											ctor: '::',
-											_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$ModeUpdate),
+											_0: _elm_lang$html$Html_Events$onInput(_user$project$App$ModeUpdate),
 											_1: {ctor: '[]'}
 										},
 										{
@@ -11284,15 +11338,30 @@ var _user$project$Main$view = function (model) {
 														_elm_lang$html$Html$option,
 														{
 															ctor: '::',
-															_0: _elm_lang$html$Html_Attributes$value('Major blues'),
+															_0: _elm_lang$html$Html_Attributes$value('Blues'),
 															_1: {ctor: '[]'}
 														},
 														{
 															ctor: '::',
-															_0: _elm_lang$html$Html$text('Major blues'),
+															_0: _elm_lang$html$Html$text('Blues'),
 															_1: {ctor: '[]'}
 														}),
-													_1: {ctor: '[]'}
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$option,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$value('Major blues'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html$text('Major blues'),
+																_1: {ctor: '[]'}
+															}),
+														_1: {ctor: '[]'}
+													}
 												}
 											}
 										}),
@@ -11322,7 +11391,7 @@ var _user$project$Main$view = function (model) {
 									_elm_lang$html$Html$select,
 									{
 										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$HarpUpdate),
+										_0: _elm_lang$html$Html_Events$onInput(_user$project$App$HarpUpdate),
 										_1: {ctor: '[]'}
 									},
 									{
@@ -11452,7 +11521,7 @@ var _user$project$Main$view = function (model) {
 										_elm_lang$html$Html$select,
 										{
 											ctor: '::',
-											_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$HarpAccUpdate),
+											_0: _elm_lang$html$Html_Events$onInput(_user$project$App$HarpAccUpdate),
 											_1: {ctor: '[]'}
 										},
 										{
@@ -11465,7 +11534,7 @@ var _user$project$Main$view = function (model) {
 													_1: {
 														ctor: '::',
 														_0: _elm_lang$html$Html_Attributes$selected(
-															_elm_lang$core$Native_Utils.eq(model.harp.accidental, _user$project$Main$Flat)),
+															_elm_lang$core$Native_Utils.eq(model.harp.accidental, _user$project$App$Flat)),
 														_1: {ctor: '[]'}
 													}
 												},
@@ -11484,7 +11553,7 @@ var _user$project$Main$view = function (model) {
 														_1: {
 															ctor: '::',
 															_0: _elm_lang$html$Html_Attributes$selected(
-																_elm_lang$core$Native_Utils.eq(model.harp.accidental, _user$project$Main$Natural)),
+																_elm_lang$core$Native_Utils.eq(model.harp.accidental, _user$project$App$Natural)),
 															_1: {ctor: '[]'}
 														}
 													},
@@ -11503,7 +11572,7 @@ var _user$project$Main$view = function (model) {
 															_1: {
 																ctor: '::',
 																_0: _elm_lang$html$Html_Attributes$selected(
-																	_elm_lang$core$Native_Utils.eq(model.harp.accidental, _user$project$Main$Sharp)),
+																	_elm_lang$core$Native_Utils.eq(model.harp.accidental, _user$project$App$Sharp)),
 																_1: {ctor: '[]'}
 															}
 														},
@@ -11525,12 +11594,12 @@ var _user$project$Main$view = function (model) {
 			}
 		});
 };
-var _user$project$Main$main = _elm_lang$html$Html$program(
-	{init: _user$project$Main$init, view: _user$project$Main$view, update: _user$project$Main$update, subscriptions: _user$project$Main$subscriptions})();
+var _user$project$App$main = _elm_lang$html$Html$program(
+	{init: _user$project$App$init, view: _user$project$App$view, update: _user$project$App$update, subscriptions: _user$project$App$subscriptions})();
 var Elm = {};
-Elm['Main'] = Elm['Main'] || {};
-if (typeof _user$project$Main$main !== 'undefined') {
-    _user$project$Main$main(Elm['Main'], 'Main', undefined);
+Elm['App'] = Elm['App'] || {};
+if (typeof _user$project$App$main !== 'undefined') {
+    _user$project$App$main(Elm['App'], 'App', undefined);
 }
 
 if (typeof define === "function" && define['amd'])
@@ -11562,4 +11631,4 @@ for (var publicModule in Elm)
 }
 
 }).call(this);
-</script></head><body><script type="text/javascript">Elm.Main.fullscreen()</script></body></html>
+</script></head><body><script type="text/javascript">Elm.App.fullscreen()</script></body></html>

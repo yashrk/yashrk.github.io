@@ -1,0 +1,12 @@
+body {
+    background-color: #fffff7;
+}
+a, p {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}

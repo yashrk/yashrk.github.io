@@ -6,6 +6,12 @@
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i|Roboto:700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@YuriyShirokov">
+    <meta name="twitter:title" content="Проекты">
+    <meta name="twitter:description" content="Мои домашние проекты">
+    <meta name="twitter:image" content="images/capybara.jpeg">
   </head>
   <body>
     <header></header>
@@ -17,12 +23,30 @@
       </ul>
       <div id="i18n"><a href="index-en.html">English version</a></div>
     </nav>
-    <main>
-      <h1>Проекты</h1>
+    <main itemscope itemtype="http://schema.org/Article">
+      <h1 itemprop="name">Проекты</h1>
       <section id="генератор-аппликатур-для-губной-гармошки" class="level2">
 <h2>Генератор аппликатур для губной гармошки</h2>
 <p><a href="harmonica-scales.html">Harmonica scale chart calculator</a></p>
 </section>
+      <!-- schema.org -->
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Юрий Широков">
+      </span>
+      <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="yashrk.github.io">
+        <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="images/capybara.jpeg">
+          <meta itemprop="image" content="images/capybara.jpeg">
+          <meta itemprop="width" content="100">
+          <meta itemprop="height" content="100">
+        </span>
+      </span>
+      <meta itemprop="headline" content="Проекты">
+      <meta itemprop="datePublished" content="2018-04-15">
+      <meta itemprop="dateModified" content="2019-09-05">
+      <meta itemprop="image" content="images/capybara.jpeg">
+      <meta itemprop="description" content="Мои домашние проекты">
     </main>
     <aside>
     </aside>

@@ -1,0 +1,80 @@
+<!-- blog-ru template output -->
+<!-- header-ru template output -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Разбираюсь с Hakyll</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i|Roboto:700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@YuriyShirokov">
+    <meta name="twitter:title" content="Разбираюсь с Hakyll">
+    <meta name="twitter:description" content="Разбираюсь с Hakyll, это интересно">
+    <meta name="twitter:image" content="https://yashrk.github.io/images/posts/2024-01-25-Hakyll-logo.png">
+    <link rel="webmention" href="https://webmention.io/yashrk.github.io/webmention">
+    <link rel="pingback" href="https://webmention.io/yashrk.github.io/xmlrpc">
+  </head>
+  <body>
+    <header></header>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Контакты</a></li>
+        <li><a href="/blog-ru.html">Блог</a></li>
+        <li><a href="/projects-ru.html">Проекты</a></li>
+        <li><a href="/travels-ru.html">Путешествия</a></li>
+      </ul>
+      <div id="i18n"><a href="index-en.html">English version</a></div>
+    </nav>
+<!-- header-ru template output finished -->
+
+    <main itemscope itemtype="http://schema.org/Article">
+      <h1 itemprop="name">Разбираюсь с Hakyll</h1>
+      <a href="/posts/2024-01-25-Hakyll-ru.html" class="date-link">25.01.2024</a>
+      <p>Несколько лет назад я завёл этот сайт просто чтобы разобраться с GitHub Pages. И генератор HTML выбирал по принципу «ну, чтобы было не противно». Под руку первым попался <a href="https://jaspervdj.be/hakyll/">Hakyll</a> — конфигурируется вроде просто, язык симпатичный (хотя Haskell я в то время почти не знал), все нужные возможности вроде есть — пойдёт.</p>
+<figure>
+<img src="/images/posts/2024-01-25-Hakyll-logo.png" alt="Логотип Hakyll" />
+<figcaption aria-hidden="true">Логотип Hakyll</figcaption>
+</figure>
+<p>Haskell я, однако, за это время немного подучил, выражения в конфиге перестали быть заклинаниями, и я понял, что мне <em>интересно</em> возиться с движком.</p>
+<p>Не могу сказать, что это самый дружественный к новичку генератор сайтов: что такое моноид, монада и прочие стандартные хаскелевские классы типов для его тонкой настройки лучше знать. Но это очень прикольная игрушка для тех, кто сносно знает Хаскель. Вот, запилил здесь блог — не потому, что мне так уж нужен блог, а потому что возиться с Hakyll весело.</p>
+<p>Hakyll неплохо документирован, так что я решил не делать здесь урок «как создать свой статический сайт в Hakyll за 5 минут», их и так уже достаточно. Но <a href="https://github.com/yashrk/yashrk.github.io-hakyll">исходники этого сайта</a> рекомендую посмотреть, чтобы самостоятельно убедиться в нескольких вещах:</p>
+<ul>
+<li>Hakyll позволяет делать достаточно сложную логику без изобретения велосипедов (на момент написания поста в моём конфиге почти исключительно маршруты — то есть правила вида «CSS туда, HTML туда»);</li>
+<li>Hakyll это действительно отличный DSL для генераторов статических сайтов, без лишней эзотерики (которой, увы, полны многие популярные библиотеки для Хаскеля);</li>
+<li>код получается достаточно прозрачным и красивым, чтобы через несколько лет его не хотелось немедленно закрыть; зарефакторить даже кривоватый сайт на Hakyll оказывается таки проще, чем всё переписывать с нуля.</li>
+</ul>
+<p>Собственно генератор сайтов это файл <code>site.hs</code>, остальное, по сути — входные данные для него или статический контент, который выкладывается как есть.</p>
+<!-- footer-ru template output -->
+      <!-- schema.org -->
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Юрий Широков">
+      </span>
+      <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="yashrk.github.io">
+        <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="images/capybara.jpeg">
+          <meta itemprop="image" content="images/capybara.jpeg">
+          <meta itemprop="width" content="100">
+          <meta itemprop="height" content="100">
+        </span>
+      </span>
+      <meta itemprop="headline" content="Разбираюсь с Hakyll">
+      <meta itemprop="datePublished" content="2024-01-25">
+      
+        <meta itemprop="dateModified" content="2024-01-25">
+      
+      <meta itemprop="image" content="/images/posts/2024-01-25-Hakyll-logo.png">
+      <meta itemprop="description" content="Разбираюсь с Hakyll, это интересно">
+    </main>
+    <aside>
+    </aside>
+    <footer>
+    </footer>
+  </body>
+</html>
+<!-- footer-ru template output finished -->
+
+<!-- blog-ru template output finished -->
